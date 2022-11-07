@@ -16,11 +16,12 @@ export default class Books_by_genre extends LightningElement {
         this.error = undefined;
         let currentData = [];
         data.forEach((row)=> { let rowData = {};
-rowData.BookCount = row.NumOfBooks;
-rowData.genre__c = row.bookByGenre;
-if (row.genre__c) {
-    rowData.BookCount = row.NumOfBooks;
-}
+rowData.NumOfBooks = row.NumOfBooks;
+rowData.bookByGenre = row.bookByGenre;
+
+// if (row.genre__c) {
+//     rowData.BookCount = row.NumOfBooks;
+// }
 currentData.push(rowData);
 
 });

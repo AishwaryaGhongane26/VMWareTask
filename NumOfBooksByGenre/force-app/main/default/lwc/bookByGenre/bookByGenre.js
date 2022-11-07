@@ -6,7 +6,7 @@ const Columns = [
    
     ]// colum for datatable
 export default class Books_by_genre extends LightningElement {
-   @api recordId;   // give reacordid of account
+   @api recordId;   
    bookgenre;
     error;
     cols=Columns; 

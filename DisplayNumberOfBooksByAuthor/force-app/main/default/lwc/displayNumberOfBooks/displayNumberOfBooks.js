@@ -25,12 +25,14 @@ export default class Related_Author extends LightningElement {
 rowData.Author__c_Author_Name__c = row.Author__r.Author_Name__c;
 rowData.Author__c_Number_of_Books_Published__c = row.Author__r.Number_of_Books_Published__c;
 
+// if (row.Author__c_First_Name__c) {
+//     rowData.Author__c_Number_of_Books_Published__c = row.Author__r.Number_of_Books_Published__c;
+// }
 currentData.push(rowData);
 
 });
 this.publishHouse = currentData;
        
-        //
     } else if (error) {
         this.error = error;
         this.publishHouse = undefined;
